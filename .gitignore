@@ -1,0 +1,11 @@
+node_modules/
+.next/
+data/*.db
+data/*.db-journal
+.env.local
+public/uploads/*
+!public/uploads/.gitkeep
+*.log
+shots/
+.env
+*.zip
