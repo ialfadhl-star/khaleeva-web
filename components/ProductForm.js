@@ -5,6 +5,13 @@ import { useRouter } from 'next/navigation';
 
 const CATEGORIES = ['Abaya', 'Hijab & Pashmina', 'Aksesoris'];
 const TONES = ['t1', 't2', 't3', 't4', 't5'];
+const TONE_LABELS = {
+  t1: 'Coklat Terracotta',
+  t2: 'Hijau Sage',
+  t3: 'Merah Marun',
+  t4: 'Krem',
+  t5: 'Coklat Tua',
+};
 
 export default function ProductForm({ initial }) {
   const router = useRouter();
@@ -105,7 +112,7 @@ export default function ProductForm({ initial }) {
           <div>
             <label className="field-label">Warna Placeholder Foto</label>
             <select value={form.tone} onChange={(e) => update('tone', e.target.value)}>
-              {TONES.map((t) => <option key={t} value={t}>{t.toUpperCase()}</option>)}
+              {TONES.map((t) => <option key={t} value={t}>{TONE_LABELS[t]}</option>)}
             </select>
           </div>
         </div>

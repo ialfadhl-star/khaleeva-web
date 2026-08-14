@@ -1,6 +1,7 @@
 import { CartProvider } from '../../components/CartContext';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import WelcomeModal from '../../components/WelcomeModal';
 import { getSetting } from '../../lib/settings';
 
 // This whole section reads live data (products, orders, settings) straight
@@ -14,6 +15,7 @@ export default function SiteLayout({ children }) {
   return (
     <CartProvider>
       <div className="page">
+        <WelcomeModal />
         <Header announcement={announcement} />
         {children}
         <Footer />

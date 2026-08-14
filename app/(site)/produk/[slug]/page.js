@@ -26,8 +26,8 @@ export default async function ProductPage({ params }) {
         Beranda / Katalog / {product.category} / <b>{product.name}</b>
       </div>
 
-      <div className="pdp-wrap" style={{ gridTemplateColumns: '1fr 1fr' }}>
-        <Photo tone={product.tone} image={product.image} style={{ height: 560 }} />
+      <div className="pdp-wrap pdp-wrap--simple">
+        <Photo tone={product.tone} image={product.image} className="pdp-main-photo" />
         <ProductDetailClient product={product} />
       </div>
 
